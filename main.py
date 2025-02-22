@@ -3,7 +3,11 @@ import sys
 
 import requests
 from urllib.parse import urlencode
+import PyQt6
+from PyQt6.QtWidgets import QApplication
 
+from basic_main import MapWindow
+from src.windows.main_window_ui import Ui_MainWindow
 
 
 def main():
@@ -31,14 +35,21 @@ def show_map(ll_spn=None) -> None:
 
     # Запишем полученное изображение в файл.
     map_file = "map.png"
+    with open(map_file, "wb") as file:
+        file.write(response.content)
 
+    app = QApplication(sys.argv)
+    ex = MapWindow()
+    ex.show()
+    sys.exit(app.exec())
 
+    # Удаляем за собой файл с изображением.
     os.remove(map_file)
 
 
 def get_coordinates(geocode: str) -> tuple[tuple[float, float], tuple[float, float]]:
     server_address = 'http://geocode-maps.yandex.ru/1.x'
-    api_key = '40d1649f-0493-4b70-98ba-98533de7710b'
+    api_key = '8013b162-6b42-4997-9691-77b7074026e0'
     # Готовим запрос.
     geocoder_request = f'{server_address}?apikey={api_key}&geocode={geocode}&format=json'
 
