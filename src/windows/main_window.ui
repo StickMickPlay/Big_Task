@@ -26,12 +26,36 @@
             <property name="text">
              <string>Темная тема</string>
             </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
            <widget class="QRadioButton" name="light_theme">
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+              <underline>false</underline>
+              <strikeout>false</strikeout>
+             </font>
+            </property>
+            <property name="tabletTracking">
+             <bool>false</bool>
+            </property>
+            <property name="acceptDrops">
+             <bool>false</bool>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>Светлая тема</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
@@ -43,8 +67,14 @@
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
            <widget class="QRadioButton" name="basic_map">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
             <property name="text">
              <string>базовая карта</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -82,7 +112,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="search">
+        <widget class="QPushButton" name="search">
          <property name="text">
           <string>Искать</string>
          </property>
@@ -102,9 +132,10 @@
         </spacer>
        </item>
        <item>
-        <widget class="QLabel" name="reset">
+        <widget class="QPushButton" name="reset">
          <property name="text">
-          <string>сброс поискового результата</string>
+          <string>Сброс поискового
+ результата</string>
          </property>
         </widget>
        </item>

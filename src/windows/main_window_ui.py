@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'C:\Users\student.3-207-25\PycharmProjects\Big_Task\src\windows\main_window.ui'
+# Form implementation generated from reading ui file 'C:\Users\student.1-426-00\PycharmProjects\Big_Task\src\windows\main_window.ui'
 #
 # Created by: PyQt6 UI code generator 6.7.1
 #
@@ -26,9 +26,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.theme)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.dark_theme = QtWidgets.QRadioButton(parent=self.theme)
+        self.dark_theme.setChecked(True)
         self.dark_theme.setObjectName("dark_theme")
         self.verticalLayout_2.addWidget(self.dark_theme)
         self.light_theme = QtWidgets.QRadioButton(parent=self.theme)
+        font = QtGui.QFont()
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        font.setStrikeOut(False)
+        self.light_theme.setFont(font)
+        self.light_theme.setTabletTracking(False)
+        self.light_theme.setAcceptDrops(False)
+        self.light_theme.setAutoFillBackground(False)
+        self.light_theme.setChecked(False)
         self.light_theme.setObjectName("light_theme")
         self.verticalLayout_2.addWidget(self.light_theme)
         self.horizontalLayout_2.addWidget(self.theme)
@@ -37,6 +49,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.map_type)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.basic_map = QtWidgets.QRadioButton(parent=self.map_type)
+        self.basic_map.setEnabled(True)
+        self.basic_map.setChecked(True)
         self.basic_map.setObjectName("basic_map")
         self.verticalLayout_3.addWidget(self.basic_map)
         self.car_map = QtWidgets.QRadioButton(parent=self.map_type)
@@ -57,12 +71,12 @@ class Ui_MainWindow(object):
         self.saerch_lina_edit.setObjectName("saerch_lina_edit")
         self.verticalLayout_4.addWidget(self.saerch_lina_edit)
         self.horizontalLayout_2.addWidget(self.widget_5)
-        self.search = QtWidgets.QLabel(parent=self.func)
+        self.search = QtWidgets.QPushButton(parent=self.func)
         self.search.setObjectName("search")
         self.horizontalLayout_2.addWidget(self.search)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
-        self.reset = QtWidgets.QLabel(parent=self.func)
+        self.reset = QtWidgets.QPushButton(parent=self.func)
         self.reset.setObjectName("reset")
         self.horizontalLayout_2.addWidget(self.reset)
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
@@ -94,4 +108,5 @@ class Ui_MainWindow(object):
         self.public_transport.setText(_translate("MainWindow", "общественный транспорт"))
         self.adminictrative_map.setText(_translate("MainWindow", "административная карта "))
         self.search.setText(_translate("MainWindow", "Искать"))
-        self.reset.setText(_translate("MainWindow", "сброс поискового результата"))
+        self.reset.setText(_translate("MainWindow", "Сброс поискового\n"
+" результата"))
